@@ -5,13 +5,13 @@ pipeline {
       steps {
         //build - just in case, make sure modules are there
         echo 'Just make sure the necessary python stuff is there'
-        sh 'pip3 install -r /home/linelij/flaskapi/requirements.txt'
+        sh 'pip3 install -r /home/linelij/FlaskAPI/requirements.txt'
       }
     }
     stage('test') {
       steps {
         //run a simple test, does /index return 200 OK
-        sh 'python3 /home/linelij/flaskapi/test.py'
+        sh 'python3 /home/linelij/FlaskAPI/test.py'
       }   
     }
     stage('deploy') {
@@ -20,8 +20,8 @@ pipeline {
          echo 'zipping files'
          sh 'pwd'
          sh 'ls -las'
-         sh 'tar -czvf flaskapi.tar.gz *'
-         sh 'mv flaskapi.tar.gz /home/linelij/deploy'
+         sh 'tar -czvf FlaskAPI.tar.gz *'
+         sh 'mv FlaskAPI.tar.gz ./deploy'
       } 
     }
   }
