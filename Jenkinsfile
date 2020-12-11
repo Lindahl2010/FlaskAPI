@@ -5,12 +5,12 @@ pipeline {
   stages {
    stage('build') {
     steps {
-      sh 'pip3 install --no-cache-dir -r requirements.txt' 
+      sh 'pip3 install --no-cache-dir -r /home/linelij/FlaskAPI/requirements.txt' 
    }
   }
   stage('test') {
    steps {
-     sh 'python3 test.py'
+     sh 'python3 /home/linelij/FlaskAPI/test.py'
     } 
    }
   }
