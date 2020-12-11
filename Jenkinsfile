@@ -21,7 +21,7 @@ pipeline {
          sh 'pwd'
          sh 'ls -las'
          sh 'tar -czvf FlaskAPI.tar.gz *'
-         sh 'mv FlaskAPI.tar.gz ./deploy'
+         sh 'mv FlaskAPI.tar.gz /home/linelij/deploy'
       } 
     }
   }
